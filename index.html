@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum de Luis Solano</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+
+        h1 {
+            color: #00c3ff;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #00c3ff;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile img:hover {
+            transform: scale(1.1);
+        }
+
+        .section {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .bar-container {
+            width: 100%;
+            background-color: #444;
+            border-radius: 5px;
+            margin: 5px 0;
+            overflow: hidden;
+        }
+
+        .bar {
+            height: 20px;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: width 1s ease-in-out;
+        }
+
+        .html { width: 90%; background-color: #007BFF; }
+        .css { width: 85%; background-color: #28A745; }
+        .js { width: 75%; background-color: #FFC107; }
+        .responsive { width: 80%; background-color: #17A2B8; }
+
+        .leadership { width: 85%; background-color: #FF5733; }  /* Naranja */
+        .teamwork { width: 90%; background-color: #8E44AD; }  /* Morado */
+
+
+        .spanish { width: 100%; background-color: #007BFF; }
+        .english { width: 85%; background-color: #28A745; }
+        .portuguese { width: 70%; background-color: #FFC107; }
+        .french { width: 40%; background-color: #DC3545; }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 5px;
+            background: #00c3ff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #0086b3;
+        }
+
+        .photo-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .photo-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        #languageBtn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 10px;
+            background: #00c3ff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        #languageBtn:hover {
+            background: #0086b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <button id="languageBtn" onclick="changeLanguage()">EN</button>
+        <h1 id="name">Luis F. Solano Campos</h1>
+        <p id="contact">Luisfrancisco1824@gmail.com | +51 906 832 980 | Talara</p>
+
+        <div class="profile">
+            <img src="img/foto_perfil.jpeg" alt="Foto de perfil" onclick="openModal()">
+        </div>
+        <div class="section">
+            <h2 id="about-title">Sobre mí</h2>
+            <p id="about-text">
+                Apasionado por la tecnología y el desarrollo de software, con habilidades en programación y resolución de problemas. 
+                Me encanta aprender, innovar y mejorar constantemente mis habilidades. 
+                Además, disfruto trabajar en equipo y liderar proyectos desafiantes.
+            </p>
+        </div>
+        
+            <div class="section">
+                <h2 id="exp">Experiencia</h2>
+                <p id="experience-detail">SENATI - Estudios y prácticas (2022-2025)</p>
+            </div>
+            
+
+        <div class="section">
+            <h2 id="skills">Habilidades Técnicas</h2>
+            <p>HTML</p>
+            <div class="bar-container"><div class="bar html">90%</div></div>
+            <p>CSS</p>
+            <div class="bar-container"><div class="bar css">85%</div></div>
+            <p>JavaScript</p>
+            <div class="bar-container"><div class="bar js">75%</div></div>
+            <p>Responsive Design</p>
+            <div class="bar-container"><div class="bar responsive">80%</div></div>
+            <div class="section">
+                <div class="section">
+                    <h2 id="soft-skills">Habilidades Blandas</h2>
+                
+                    <p id="leadership">Liderazgo</p>
+                    <div class="bar-container"><div class="bar leadership">85%</div></div>
+                
+                    <p id="teamwork">Trabajo en equipo</p>
+                    <div class="bar-container"><div class="bar teamwork">90%</div></div>
+                </div>
+                
+                <div class="section">
+                    <h2 id="languages">Idiomas</h2>
+                
+                    <p id="spanish">Español</p>
+                    <div class="bar-container"><div class="bar spanish">100%</div></div>
+                
+                    <p id="english">Inglés</p>
+                    <div class="bar-container"><div class="bar english">85%</div></div>
+                
+                    <p id="portuguese">Portugués</p>
+                    <div class="bar-container"><div class="bar portuguese">70%</div></div>
+                
+                    <p id="french">Francés</p>
+                    <div class="bar-container"><div class="bar french">40%</div></div>
+                </div>
+                
+
+                <a href="http://lsportafolio.infinityfreeapp.com/" class="btn" id="portfolio-btn" target="_blank">Portafolio</a>
+        <a href="https://www.linkedin.com/in/luis-solano-126a32341/" class="btn" target="_blank">LinkedIn</a>
+        <a href="https://github.com/LuisfrankJyG/" class="btn" target="_blank">GitHub</a>
+
+        
+        <a href="#" class="btn" id="pdf-btn" onclick="downloadPDF()">Descargar PDF</a>
+
+    </div>
+
+    <div class="photo-modal" id="photoModal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img src="img/foto_perfil.jpeg" id="modalImg">
+    </div>
+
+    <script>
+        function openModal() { document.getElementById("photoModal").style.display = "flex"; }
+        function closeModal() { document.getElementById("photoModal").style.display = "none"; }
+        function downloadPDF() { window.print(); }
+
+       function changeLanguage() {
+    let lang = document.getElementById("languageBtn");
+    let isEnglish = lang.innerText === "EN";
+
+    document.getElementById("name").innerText = isEnglish ? "Luis F. Solano Campos" : "Luis F. Solano Campos";
+    document.getElementById("exp").innerText = isEnglish ? "Experience" : "Experiencia";
+    document.getElementById("skills").innerText = isEnglish ? "Technical Skills" : "Habilidades Técnicas";
+    document.getElementById("languages").innerText = isEnglish ? "Languages" : "Idiomas";
+
+    document.getElementById("about-title").innerText = isEnglish ? "About Me" : "Sobre mí";
+    document.getElementById("about-text").innerText = isEnglish
+        ? "Passionate about technology and software development, with skills in programming and problem-solving. "
+          + "I love learning, innovating, and continuously improving my abilities. "
+          + "Additionally, I enjoy teamwork and leading challenging projects."
+        : "Apasionado por la tecnología y el desarrollo de software, con habilidades en programación y resolución de problemas. "
+          + "Me encanta aprender, innovar y mejorar constantemente mis habilidades. "
+          + "Además, disfruto trabajar en equipo y liderar proyectos desafiantes.";
+
+    // Habilidades Blandas
+    document.getElementById("soft-skills").innerText = isEnglish ? "Soft Skills" : "Habilidades Blandas";
+    document.getElementById("leadership").innerText = isEnglish ? "Leadership" : "Liderazgo";
+    document.getElementById("teamwork").innerText = isEnglish ? "Teamwork" : "Trabajo en equipo";
+
+    // Idiomas
+    document.getElementById("spanish").innerText = isEnglish ? "Spanish" : "Español";
+    document.getElementById("english").innerText = isEnglish ? "English" : "Inglés";
+    document.getElementById("portuguese").innerText = isEnglish ? "Portuguese" : "Portugués";
+    document.getElementById("french").innerText = isEnglish ? "French" : "Francés";
+
+    document.getElementById("experience-detail").innerText = isEnglish
+        ? "SENATI - Studies and internships (2022-2025)"
+        : "SENATI - Estudios y prácticas (2022-2025)";
+    document.getElementById("portfolio-btn").innerText = isEnglish ? "Portfolio" : "Portafolio";
+    document.getElementById("pdf-btn").innerText = isEnglish ? "Download PDF" : "Descargar PDF";
+
+    // Cambiar el texto del botón
+    lang.innerText = isEnglish ? "ES" : "EN";
+}
+
+        
+        function downloadPDF() {
+        const element = document.querySelector('.container'); // Selecciona el contenedor principal
+        html2pdf(element, {
+        margin: 10,
+        filename: 'Curriculum_Luis_Solano.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        });
+}
+
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
